@@ -1,0 +1,39 @@
+name: Qiita OGP Compressor
+services:
+  app:
+    image: qiita-ogp-compressor:latest
+    build: .
+    platform: linux/amd64
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - LOG_LEVEL=info
+    restart: always
+    networks:
+      - ogp-network
+  mongo:
+    image: mongo:7.0
+    environment:
+      - AUTH=no
+    command: [--replSet, my-replica-set, --noauth, --bind_ip_all]
+    healthcheck:
+      test: mongosh mongo-init.js
+      interval: 10s
+      start_period: 30s
+    ports:
+      - "27017:27017"
+    volumes:
+      - qiita-ogp-mongo:/data/db
+      - ./mongo-init.js:/mongo-init.js
+    restart: always
+    networks:
+      - ogp-network
+
+networks:
+  ogp-network:
+    driver: bridge
+
+volumes:
+  qiita-ogp-mongo:
+    driver: local
