@@ -12,9 +12,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return metadata;
 }
 
-export const viewport: Viewport = {
-  themeColor: "#67cb1c",
-};
+export async function generateViewport(): Promise<Viewport> {
+  return {
+    themeColor: "#67cb1c",
+  };
+}
 
 export default async function Page({ params }: Props) {
   const { itemid } = await params;

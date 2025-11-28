@@ -16,11 +16,12 @@
     "react-dom": "19.2.0"
   },
   "devDependencies": {
-    "@types/jsdom": "^27.0.0",
     "@tailwindcss/postcss": "^4.1.17",
+    "@types/jsdom": "^27.0.0",
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
+    "baseline-browser-mapping": "^2.8.32",
     "eslint": "^9.39.1",
     "eslint-config-next": "16.0.3",
     "tailwindcss": "^4.1.17",
