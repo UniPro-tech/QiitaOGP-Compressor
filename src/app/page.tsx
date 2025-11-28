@@ -260,6 +260,8 @@ export default function Home() {
         <span className="text-center">
           &copy; 2025 Yuito Akatsuki, &copy; 2025 UniProject All rights
           reserved.
+          <br />
+          例の画像の使用を許諾してくださったやーはり氏に感謝します。
         </span>
       </footer>
     </div>
