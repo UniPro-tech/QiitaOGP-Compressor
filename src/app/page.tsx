@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div className="center p-2">
@@ -117,29 +120,54 @@ export default function Home() {
         </section>
         <section>
           <h2>制作者について</h2>
+          <p>あかつき ゆいと (Yuito Akatsuki) が個人で開発しています。</p>
           <p>
             ご意見・ご要望・バグ報告などがございましたら、以下のメールアドレスまでご連絡ください。
           </p>
           <p>
-            Email:
-            <a href="mailto:yuito@yuito-it.jp">yuito@yuito-it.jp</a>
+            Email:{" "}
+            <Link href="mailto:yuito@yuito-it.jp">yuito@yuito-it.jp</Link>
           </p>
           <section>
             <h3>リンク</h3>
             <ul>
               <li>
-                Twitter:
-                <a href="https://twitter.com/yuito_it_">@yuito_it_</a>
+                Website:{" "}
+                <Link href="https://yuito-it.jp/">https://yuito-it.jp/</Link>
               </li>
               <li>
-                GitHub:
-                <a href="https://github.com/yuito-it">@yuito-it</a>
+                Qiita:{" "}
+                <Link href="https://qiita.com/yuito_it_">@yuito_it_</Link>
+              </li>
+              <li>
+                Twitter:{" "}
+                <Link href="https://twitter.com/yuito_it_">@yuito_it_</Link>
+              </li>
+              <li>
+                GitHub:{" "}
+                <Link href="https://github.com/yuito-it">@yuito-it</Link>
               </li>
             </ul>
           </section>
         </section>
       </main>
       <footer>
+        <Link href="https://yuito-it.jp" className="max-w-1/3 inline-block">
+          <Image
+            src="https://yuito-it.jp/img/banner/yuitopia_80x31.gif"
+            alt="yuitopia - あかつきゆいと公式ウェブサイト"
+            width="367"
+            height="130"
+          />
+        </Link>
+        <Link href="https://uniproject.jp" className="max-w-1/3 inline-block">
+          <Image
+            src="/banner/powered_by_unipro_ol.webp"
+            alt="UniProject - 個人開発を応援するコミュニティ"
+            width="367"
+            height="130"
+          />
+        </Link>
         <span className="text-center">
           &copy; 2025 Yuito Akatsuki, &copy; 2025 UniProject All rights
           reserved.
