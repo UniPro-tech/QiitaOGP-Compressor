@@ -1,3 +1,4 @@
+import URLGenerator from "@/components/URLGenerator";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -14,7 +15,7 @@ export default function Home() {
           <p>
             下記ボックスにQiitaの記事のURLを入力すると、OGP用のURLを生成します。
           </p>
-          {/* TODO: ジェネレーター実装 */}
+          <URLGenerator />
         </section>
         <section>
           <h2>背景</h2>

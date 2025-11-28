@@ -132,3 +132,7 @@ footer {
   align-items: center;
   gap: 1rem;
 }
+
+button {
+  cursor: pointer;
+}
