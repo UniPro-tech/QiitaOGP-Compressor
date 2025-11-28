@@ -1,4 +1,5 @@
 import URLGenerator from "@/components/URLGenerator";
+import { getVersion } from "@/lib/versionGetter";
 import { Metadata, Viewport } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -52,6 +53,7 @@ export const viewport: Viewport = {
 };
 
 export default function Home() {
+  const version = getVersion();
   return (
     <div className="center p-2">
       <main>
@@ -216,8 +218,16 @@ export default function Home() {
             alt="UniProject - 個人開発を応援するコミュニティ"
             width="367"
             height="130"
+            unoptimized
           />
         </Link>
+        <span>
+          {" "}
+          {version} |{" "}
+          <Link href="https://github.com/UniPro-tech/QiitaOGP-Compressor.git">
+            GitHub
+          </Link>
+        </span>
         <span className="text-center">
           &copy; 2025 Yuito Akatsuki, &copy; 2025 UniProject All rights
           reserved.
