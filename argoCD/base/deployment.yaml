@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: registry.uniproject.jp/common/qiita-ogp-compressor:0.1.0
+          image: registry.uniproject.jp/common/qiita-ogp-compressor:1.0.0-rc.6
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
