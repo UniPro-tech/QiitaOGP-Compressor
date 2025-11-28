@@ -9,6 +9,6 @@ spec:
     - namePattern: "qiita-ogp-compressor"
       images:
         - alias: "qiita-ogp-compressor"
-          imageName: "registry.uniproject.jp/common/qiita-ogp-compressor"
+          imageName: "registry.uniproject.jp/common/qiita-ogp-compressor:x.x.x-x"
           commonUpdateSettings:
             updateStrategy: "semver"
