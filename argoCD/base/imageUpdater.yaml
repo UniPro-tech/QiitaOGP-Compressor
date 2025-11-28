@@ -1,0 +1,14 @@
+apiVersion: argocd-image-updater.argoproj.io/v1alpha1
+kind: ImageUpdater
+metadata:
+  name: qiita-ogp-compressor-image-updater
+  namespace: argocd
+spec:
+  namespace: argocd
+  applicationRefs:
+    - namePattern: "qiita-ogp-compressor"
+      images:
+        - alias: "qiita-ogp-compressor"
+          imageName: "registry.uniproject.jp/common/qiita-ogp-compressor"
+          commonUpdateSettings:
+            updateStrategy: "semver"

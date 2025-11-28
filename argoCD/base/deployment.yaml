@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: qiita-ogp-compressor
+spec:
+  selector:
+    matchLabels:
+      app: qiita-ogp-compressor
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: qiita-ogp-compressor
+    spec:
+      containers:
+        - name: app
+          image: registry.uniproject.jp/common/qiita-ogp-compressor:0.1.0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+              name: default-port
+          resources:
+            limits:
+              memory: "3Gi"
+              cpu: "2000m"
+            requests:
+              memory: "1Gi"
+              cpu: "1000m"
+          readinessProbe:
+            initialDelaySeconds: 30
+            periodSeconds: 20
+            httpGet:
+              path: /
+              port: default-port
+              httpHeaders:
+                - name: X-k8s-Header
+                  value: readiness
+          env:
+            - name: TZ
+              value: Asia/Tokyo
+      imagePullSecrets:
+        - name: internal-harbor
