@@ -1,64 +1,120 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="center">
+      <main>
+        <section>
+          <h1>Qiita OGP Compressor</h1>
+          <p>QiitaのOGPをうまく表示できるようにするためのサイトです。</p>
+        </section>
+        <section>
+          <h2>ジェネレーター</h2>
+          <p>
+            下記ボックスにQiitaの記事のURLを入力すると、OGP用のURLを生成します。
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+          {/* TODO: ジェネレーター実装 */}
+        </section>
+        <section>
+          <h2>背景</h2>
+          <p>
+            このサイトを
+            <wbr />
+            作るにあたって、
+            <wbr />
+            Discordで
+            <wbr />
+            Qiitaの
+            <wbr />
+            OGPが
+            <wbr />
+            うまく
+            <wbr />
+            表示されないという
+            <wbr />
+            話題を見かけました。
+            <wbr />
+            調べてみると、Qiitaの
+            <wbr />
+            OGP画像には
+            <wbr />
+            Imaginxを
+            <wbr />
+            使っているらしく、URLに記事の
+            <wbr />
+            情報をクエリパラメータが
+            <wbr />
+            乗せまくっており、Discordの
+            <wbr />
+            OGP画像の
+            <wbr />
+            URL長の
+            <wbr />
+            上限を
+            <wbr />
+            軽く超えてしまう
+            <wbr />
+            記事が
+            <wbr />
+            あるようです。
+            <wbr />
+            つまりは...
+            <wbr />
+            <strong>
+              OGPのimageの
+              <wbr />
+              URLを
+              <wbr />
+              短縮して
+              <wbr />
+              バイパスする
+              <wbr />
+              サイトを
+              <wbr />
+              つくればいいのでは？
+            </strong>
+            と思い、このサイトを
+            <wbr />
+            作成しました。
+          </p>
+        </section>
+        <section>
+          <h2>使い方</h2>
+          <p>
+            使い方は簡単です。Qiitaの記事のURLを以下のフォーマットに変換してください。
+            また、ユーザーIDの部分は省略可能です。
+            このURLは自動的に該当の記事へリダイレクトされます。
+          </p>
+          <pre>
+            <code>
+              {`https://qiita.com/{ユーザーID}/items/{記事のスラッグ}`}
+            </code>
+            <br />
+            ↓
+            <br />
+            <code>{`https://qiita.uniproject.jp/{ユーザーID}/items/{記事のスラッグ}`}</code>
+            <br />
+            もしくは
+            <br />
+            <code>{`https://qiita.uniproject.jp/items/{記事のスラッグ}`}</code>
+          </pre>
+          <section>
+            <h3>Chrome拡張機能について</h3>
+            <p>
+              さらに便利に使いたい方のために、Qiitaの共有ボタンから直にこのURLを取得できるようにする、Chrome拡張機能を誠意製作中です。
+              完成次第、こちらのページで告知いたします。
+            </p>
+          </section>
+          <section>
+            <h3>例</h3>
+            <p></p>
+          </section>
+        </section>
+        <section>
+          <h2>注意事項</h2>
+          <p>
+            このサイトはQiita株式会社とは一切関係ありません。
+            また、Qiitaの利用規約に違反しないようにご注意ください。
+          </p>
+        </section>
       </main>
     </div>
   );
