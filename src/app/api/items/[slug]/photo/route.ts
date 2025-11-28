@@ -1,9 +1,8 @@
-"use server";
 import { getImage } from "@/lib/api/image";
-import { NextRequest } from "next/server";
+import type { NextRequest } from "next/server";
 
 export const GET = async (
-  _req: NextRequest,
+  _request: NextRequest,
   { params }: { params: Promise<{ slug: string }> }
 ) => {
   const { slug } = await params;

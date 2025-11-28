@@ -1,12 +1,11 @@
-"use server";
-import { NextRequest } from "next/server";
 import { getImage } from "@/lib/api/image";
+import type { NextRequest } from "next/server";
 
 export const GET = async (
-  _req: NextRequest,
-  { params }: { params: { uid: string; slug: string } }
+  _request: NextRequest,
+  { params }: { params: Promise<{ slug: string; uid: string }> }
 ) => {
-  const { slug, uid } = params;
+  const { slug, uid } = await params;
   const imageRes = await getImage(slug, uid);
   return new Response(imageRes.body, {
     headers: {
