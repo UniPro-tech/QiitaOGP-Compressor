@@ -36,6 +36,10 @@ main {
 
 a {
   color: inherit;
+  text-decoration: underline;
+}
+
+a:hover {
   text-decoration: none;
 }
 
@@ -78,4 +82,51 @@ code {
   background-color: rgba(27, 31, 35, 0.05);
   padding: 0.2rem 0.4rem;
   border-radius: 0.3rem;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Dark-mode specific overrides — top-level :root/@media kept unchanged */
+@media (prefers-color-scheme: dark) {
+  section {
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.03);
+    /* keep section background tied to the variable but give a subtle overlay for contrast */
+    background-color: color-mix(
+      in srgb,
+      var(--background) 92%,
+      rgba(255, 255, 255, 0.02)
+    );
+  }
+
+  code {
+    /* lighter overlay for code blocks in dark mode */
+    background-color: rgba(255, 255, 255, 0.03);
+  }
+
+  /* Ensure links and headings inherit the foreground color in dark mode */
+  a,
+  h1,
+  h2,
+  h3,
+  p {
+    color: var(--foreground);
+  }
+}
+
+footer {
+  font-size: 0.875rem;
+  color: var(--foreground);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
 }

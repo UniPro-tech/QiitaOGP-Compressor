@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="center">
+    <div className="center p-2">
       <main>
         <section>
           <h1>Qiita OGP Compressor</h1>
@@ -115,7 +115,36 @@ export default function Home() {
             また、Qiitaの利用規約に違反しないようにご注意ください。
           </p>
         </section>
+        <section>
+          <h2>制作者について</h2>
+          <p>
+            ご意見・ご要望・バグ報告などがございましたら、以下のメールアドレスまでご連絡ください。
+          </p>
+          <p>
+            Email:
+            <a href="mailto:yuito@yuito-it.jp">yuito@yuito-it.jp</a>
+          </p>
+          <section>
+            <h3>リンク</h3>
+            <ul>
+              <li>
+                Twitter:
+                <a href="https://twitter.com/yuito_it_">@yuito_it_</a>
+              </li>
+              <li>
+                GitHub:
+                <a href="https://github.com/yuito-it">@yuito-it</a>
+              </li>
+            </ul>
+          </section>
+        </section>
       </main>
+      <footer>
+        <span className="text-center">
+          &copy; 2025 Yuito Akatsuki, &copy; 2025 UniProject All rights
+          reserved.
+        </span>
+      </footer>
     </div>
   );
 }
