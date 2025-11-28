@@ -15,6 +15,20 @@ export const metadata: Metadata = {
     description: "QiitaのOGPをうまく表示できるようにするためのサイトです。",
     url: "https://qiita.uniproject.jp/",
     siteName: "Qiita OGP Compressor",
+    images: [
+      {
+        url: "https://qiita.uniproject.jp/ogp_1920x1080.png",
+        width: 1920,
+        height: 1080,
+        alt: "Qiita OGP Compressor",
+      },
+      {
+        url: "https://qiita.uniproject.jp/ogp_1200x630.png",
+        width: 1200,
+        height: 630,
+        alt: "Qiita OGP Compressor",
+      },
+    ],
     type: "website",
   },
   twitter: {
@@ -22,6 +36,20 @@ export const metadata: Metadata = {
     title: "Qiita OGP Compressor",
     description: "QiitaのOGPをうまく表示できるようにするためのサイトです。",
     site: "@yuito_it",
+    images: [
+      {
+        url: "https://qiita.uniproject.jp/ogp_1200x630.png",
+        width: 1200,
+        height: 630,
+        alt: "Qiita OGP Compressor",
+      },
+      {
+        url: "https://qiita.uniproject.jp/ogp_1920x1080.png",
+        width: 1920,
+        height: 1080,
+        alt: "Qiita OGP Compressor",
+      },
+    ],
   },
   applicationName: "Qiita OGP Compressor",
 };

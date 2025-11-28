@@ -1,0 +1,10 @@
+.github
+.next
+node_modules
+dist
+.DS_Store
+.env
+.env.*
+.vscode
+argoCD
+assets
