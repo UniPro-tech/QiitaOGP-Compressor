@@ -23,7 +23,6 @@ export const getMetadata = async (itemid: string, userid?: string) => {
       siteName: data.siteName,
       type: data.type,
     },
-    themeColor: data.themeColor,
   };
   return metadata;
 };

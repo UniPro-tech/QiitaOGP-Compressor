@@ -1,7 +1,7 @@
 "use server";
 import Redirector from "@/components/Redirector";
 import { getMetadata } from "@/lib/ogp";
-import { Metadata } from "next/types";
+import { Metadata, Viewport } from "next/types";
 
 type Props = {
   params: Promise<{ itemid: string }>;
@@ -11,6 +11,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const metadata = await getMetadata((await params).itemid);
   return metadata;
 }
+
+export const viewport: Viewport = {
+  themeColor: "#67cb1c",
+};
 
 export default async function Page({ params }: Props) {
   const { itemid } = await params;
