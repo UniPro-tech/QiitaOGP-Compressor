@@ -1,6 +1,39 @@
 import URLGenerator from "@/components/URLGenerator";
+import { Metadata, Viewport } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Qiita OGP Compressor",
+  description: "QiitaのOGPをうまく表示できるようにするためのサイトです。",
+  keywords: ["Qiita", "OGP", "URL", "Compressor"],
+  authors: [{ name: "Yuito Akatsuki", url: "https://yuito-it.jp/" }],
+  creator: "Yuito Akatsuki",
+  publisher: "Yuito Akatsuki",
+  openGraph: {
+    title: "Qiita OGP Compressor",
+    description: "QiitaのOGPをうまく表示できるようにするためのサイトです。",
+    url: "https://qiita.uniproject.jp/",
+    siteName: "Qiita OGP Compressor",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Qiita OGP Compressor",
+    description: "QiitaのOGPをうまく表示できるようにするためのサイトです。",
+    site: "@yuito_it",
+  },
+  applicationName: "Qiita OGP Compressor",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: "cover",
+  themeColor: "#67cb1c",
+};
 
 export default function Home() {
   return (

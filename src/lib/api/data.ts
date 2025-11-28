@@ -77,7 +77,7 @@ export const getOGPdata = async (slug: string, userId?: string) => {
     description: ogDescription ? ogDescription.getAttribute("content") : null,
     url: ogUrl ? ogUrl.getAttribute("content") : null,
     siteName: ogSiteName ? ogSiteName.getAttribute("content") : null,
-    themeColor: themeColor ? themeColor.getAttribute("content") : null,
+    themeColor: "#67cb1c",
     images: images,
   };
   return ogp;
