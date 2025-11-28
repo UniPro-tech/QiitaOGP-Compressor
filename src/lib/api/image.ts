@@ -1,15 +1,8 @@
-import type { NextRequest } from "next/server";
-
-export const getImage = async (
-  _request: NextRequest,
-  id: string,
-  uid?: string
-) => {
-  const baseUrl = `${_request.nextUrl.protocol}//${_request.nextUrl.host}`;
+export const getImage = async (id: string, uid?: string) => {
   const apiRes = await fetch(
     uid
-      ? `${baseUrl}/api/items/${encodeURIComponent(id)}`
-      : `${baseUrl}/api/${uid}/items/${encodeURIComponent(id)}`
+      ? `http://localhost:3000/api/items/${encodeURIComponent(id)}`
+      : `http://localhost:3000/api/${uid}/items/${encodeURIComponent(id)}`
   );
   const data = await apiRes.json();
   const images = data.data.images;
