@@ -252,7 +252,7 @@ export default function Home() {
         </Link>
         <span>
           {" "}
-          {version} |{" "}
+          v{version} |{" "}
           <Link href="https://github.com/UniPro-tech/QiitaOGP-Compressor.git">
             GitHub
           </Link>
