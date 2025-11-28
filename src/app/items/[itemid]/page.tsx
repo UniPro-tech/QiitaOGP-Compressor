@@ -1,5 +1,7 @@
+"use server";
 import Redirector from "@/components/redirector";
 import { getMetadata } from "@/lib/ogp";
+import { headers } from "next/headers";
 import { Metadata } from "next/types";
 
 type Props = {
@@ -7,8 +9,12 @@ type Props = {
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const basepath = "http://localhost:3000";
-  const metadata = await getMetadata(basepath, (await params).itemid);
+  const headersList = await headers();
+  const header_url = headersList.get("x-url") || "";
+  const basePath = header_url.replace(/\/items\/.*$/, "");
+  const url = new URL(basePath);
+  const baseURL = url.origin;
+  const metadata = await getMetadata(baseURL, (await params).itemid);
   return metadata;
 }
 
