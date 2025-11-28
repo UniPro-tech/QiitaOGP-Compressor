@@ -1,8 +1,14 @@
 import { JSDOM } from "jsdom";
 
+const fetchOptions: RequestInit = {
+  cache: "force-cache",
+  next: { revalidate: 900 }, // 15 minutes
+};
+
 export const getItemData = async (slug: string) => {
   const apiRes = await fetch(
-    `https://qiita.com/api/v2/items/${encodeURIComponent(slug)}`
+    `https://qiita.com/api/v2/items/${encodeURIComponent(slug)}`,
+    fetchOptions
   );
 
   if (!apiRes.ok) {
@@ -21,7 +27,8 @@ export const getOGPdata = async (slug: string, userId?: string) => {
       ? `https://qiita.com/${encodeURIComponent(
           userId
         )}/items/${encodeURIComponent(slug)}`
-      : `https://qiita.com/items/${encodeURIComponent(slug)}`
+      : `https://qiita.com/items/${encodeURIComponent(slug)}`,
+    fetchOptions
   );
 
   if (!htmlRes.ok) {
