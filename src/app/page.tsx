@@ -160,7 +160,36 @@ export default function Home() {
           </section>
           <section>
             <h3>例</h3>
-            <p></p>
+            <p>普通のリンクではDiscordでOGPが出ないリンクもあります。</p>
+            <div className="flex flex-row justify-start items-start mb-2">
+              <div className="flex flex-col justify-center items-center">
+                <Image
+                  src="/example/ng.png"
+                  alt="DiscordでOGPが出ないリンクの例"
+                  width={502}
+                  height={72}
+                />
+                <span>OGPが表示されない例</span>
+              </div>
+            </div>
+            <p>
+              Qiita OGP Compressorを使ったリンクではOGPが正しく表示されます。
+            </p>
+            <div className="flex flex-row justify-start items-start mb-2">
+              <div className="flex flex-col justify-center items-center">
+                <Image
+                  src="/example/success.png"
+                  alt="Qiita OGP Compressorを使ったリンクの例"
+                  width={613}
+                  height={473}
+                />
+                <span className="text-center">
+                  OGPが正しく表示される例
+                  <br />
+                  (ユーザー名あり)
+                </span>
+              </div>
+            </div>
           </section>
         </section>
         <section>
@@ -210,6 +239,7 @@ export default function Home() {
             alt="yuitopia - あかつきゆいと公式ウェブサイト"
             width="367"
             height="130"
+            unoptimized
           />
         </Link>
         <Link href="https://uniproject.jp" className="max-w-1/3 inline-block">
@@ -218,7 +248,6 @@ export default function Home() {
             alt="UniProject - 個人開発を応援するコミュニティ"
             width="367"
             height="130"
-            unoptimized
           />
         </Link>
         <span>
