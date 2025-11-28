@@ -1,5 +1,5 @@
 "use server";
-import Redirector from "@/components/edirector";
+import Redirector from "@/components/Redirector";
 import { getMetadata } from "@/lib/ogp";
 import { Metadata } from "next/types";
 
