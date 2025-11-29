@@ -5,22 +5,6 @@ const fetchOptions: RequestInit = {
   next: { revalidate: 900 }, // 15 minutes
 };
 
-export const getItemData = async (slug: string) => {
-  const apiRes = await fetch(
-    `https://qiita.com/api/v2/items/${encodeURIComponent(slug)}`,
-    fetchOptions
-  );
-
-  if (!apiRes.ok) {
-    return new Response("Failed to fetch data from Qiita API", {
-      status: apiRes.status,
-    });
-  }
-
-  const data = await apiRes.json();
-  return data;
-};
-
 export const getOGPdata = async (slug: string, userId?: string) => {
   const htmlRes = await fetch(
     userId
