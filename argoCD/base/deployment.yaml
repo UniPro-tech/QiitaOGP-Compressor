@@ -38,5 +38,7 @@ spec:
           env:
             - name: TZ
               value: Asia/Tokyo
+            - name: NEXT_PUBLIC_GA_ID
+              value: G-B7KWNZJLF1
       imagePullSecrets:
         - name: internal-harbor
