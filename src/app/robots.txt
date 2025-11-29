@@ -1,0 +1,8 @@
+User-Agent: Slack-ImgProxy
+Allow: /
+
+User-Agent: Slackbot-LinkExpanding
+Allow: /
+
+User-Agent: Slackbot 1.0
+Allow: /
