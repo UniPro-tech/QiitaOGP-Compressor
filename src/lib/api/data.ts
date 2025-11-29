@@ -5,13 +5,19 @@ const fetchOptions: RequestInit = {
   next: { revalidate: 900 }, // 15 minutes
 };
 
-export const getOGPdata = async (slug: string, userId?: string) => {
+export const getOGPdata = async (
+  slug: string,
+  userId?: string,
+  isPrivate?: boolean
+) => {
   const htmlRes = await fetch(
     userId
-      ? `https://qiita.com/${encodeURIComponent(
-          userId
-        )}/items/${encodeURIComponent(slug)}`
-      : `https://qiita.com/items/${encodeURIComponent(slug)}`,
+      ? `https://qiita.com/${encodeURIComponent(userId)}/${
+          isPrivate ? "private" : "items"
+        }/${encodeURIComponent(slug)}`
+      : `https://qiita.com/${
+          isPrivate ? "private" : "items"
+        }/${encodeURIComponent(slug)}`,
     fetchOptions
   );
 
