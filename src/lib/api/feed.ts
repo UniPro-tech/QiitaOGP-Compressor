@@ -73,16 +73,31 @@ export const getAtomFeed = async (
     return body;
   }
 
-  parsedXml.feed.entry.forEach((element: feedEntry) => {
-    element.link["@_href"] = element.link["@_href"].replace(
-      "https://qiita.com",
-      baseUrl || "localhost:3000"
-    );
-    element.url = element.url.replace(
-      "https://qiita.com",
-      baseUrl || "localhost:3000"
-    );
-  });
+  if (Array.isArray(parsedXml.feed.entry)) {
+    parsedXml.feed.entry.forEach((element: feedEntry) => {
+      element.link["@_href"] = element.link["@_href"].replace(
+        "https://qiita.com",
+        baseUrl || "localhost:3000"
+      );
+      if (element.url) {
+        element.url = element.url.replace(
+          "https://qiita.com",
+          baseUrl || "localhost:3000"
+        );
+      }
+    });
+  } else {
+    console.log(parsedXml.feed.entry);
+    parsedXml.feed.entry.link["@_href"] = parsedXml.feed.entry.link[
+      "@_href"
+    ].replace("https://qiita.com", baseUrl || "localhost:3000");
+    if (parsedXml.feed.entry.url) {
+      parsedXml.feed.entry.url = parsedXml.feed.entry.url.replace(
+        "https://qiita.com",
+        baseUrl || "localhost:3000"
+      );
+    }
+  }
 
   return builder.build(parsedXml);
 };
