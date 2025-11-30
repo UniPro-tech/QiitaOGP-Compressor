@@ -69,6 +69,10 @@ export const getAtomFeed = async (
   const parsedXml = parser.parse(body);
   const baseUrl = headerList.get("x-base-url");
 
+  if (!parsedXml.feed || !parsedXml.feed.entry) {
+    return body;
+  }
+
   parsedXml.feed.entry.forEach((element: feedEntry) => {
     element.link["@_href"] = element.link["@_href"].replace(
       "https://qiita.com",
