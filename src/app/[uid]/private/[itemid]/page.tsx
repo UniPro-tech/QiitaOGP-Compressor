@@ -31,7 +31,7 @@ export default async function Page({ params }: Props) {
   return (
     <div>
       Redirect for item {itemid}
-      <Redirector toItemId={itemid} />
+      <Redirector toItemId={itemid} isPrivate={true} />
     </div>
   );
 }

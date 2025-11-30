@@ -23,9 +23,9 @@ export const getMetadata = async (
     openGraph: {
       title: data.title,
       description: data.description,
-      images: `${baseUrl}/api/${
-        userid ? userid + "/" : ""
-      }items/${itemid}/photo`,
+      images: `${baseUrl}/api/${userid ? userid + "/" : ""}${
+        isPrivate ? "private" : "items"
+      }/${itemid}/photo`,
       siteName: data.siteName,
       type: data.type,
     },
