@@ -4,7 +4,7 @@ export enum FeedType {
   TAG = "tags",
   USER = "",
   POPULAR = "popular-items",
-  ORGANIZATION = "organization",
+  ORGANIZATION = "organizations",
   CALENDAR = "advent-calendar",
 }
 
@@ -47,7 +47,13 @@ export const getAtomFeed = async (
   }
 
   const res = await fetch(
-    `https://qiita.com/${type}${year ? `/${year}` : ""}/${id}/feed.atom`,
+    `https://qiita.com/${type}${year ? `/${year}` : ""}/${id}/${
+      type == FeedType.USER
+        ? "feed.atom"
+        : type == FeedType.ORGANIZATION
+        ? "activities.atom"
+        : "feed"
+    }`,
     {
       headers: {
         Accept: "application/atom+xml",
@@ -60,9 +66,7 @@ export const getAtomFeed = async (
   }
 
   const body = await res.text();
-
   const parsedXml = parser.parse(body);
-
   const baseUrl = headerList.get("x-base-url");
 
   parsedXml.feed.entry.forEach((element: feedEntry) => {
