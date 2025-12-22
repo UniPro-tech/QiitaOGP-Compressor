@@ -154,9 +154,18 @@ export default function Home() {
           <section>
             <h3>Chrome拡張機能について</h3>
             <p>
-              さらに便利に使いたい方のために、Qiitaの共有ボタンから直にこのURLを取得できるようにする、Chrome拡張機能を誠意製作中です。
-              完成次第、こちらのページで告知いたします。
+              Chrome拡張機能も開発しています。Qiitaの記事ページを開いた際に、自動的にOGPが必ず出るURLを生成してくれます。
+              <br />
+              いいねボタンの下にリンクをコピーするための共有ボタンを生成します。
             </p>
+            <Link href="https://chromewebstore.google.com/detail/ghjacgdpdljkmnldoihilcmlhdpcibod">
+              <Image
+                src="/chrome_logo.png"
+                alt="Chrome Web Store ロゴ"
+                width={184}
+                height={128}
+              />
+            </Link>
           </section>
           <section>
             <h3>例</h3>
