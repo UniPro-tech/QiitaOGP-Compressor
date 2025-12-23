@@ -32,7 +32,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: registry.uniproject.jp/common/qiita-ogp-compressor
+          images: registry.uniproject.jp/infra/qiita-ogp-compressor
           tags: |
             type=raw,value=latest
             type=semver,pattern={{version}}
