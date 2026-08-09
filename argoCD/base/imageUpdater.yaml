@@ -4,11 +4,10 @@ metadata:
   name: qiita-ogp-compressor-image-updater
   namespace: argocd
 spec:
-  namespace: argocd
   applicationRefs:
     - namePattern: "qiita-ogp-compressor"
       images:
         - alias: "qiita-ogp-compressor"
-          imageName: "registry.uniproject.jp/infra/qiita-ogp-compressor:x.x.x"
+          imageName: "registry.uniproject.jp/official/qiita-ogp-compressor:x.x.x"
           commonUpdateSettings:
             updateStrategy: "semver"
