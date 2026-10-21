@@ -36,7 +36,7 @@ jobs:
         with:
           reviewdog_version: latest
       - name: Run reviewdog with eslint
-        uses: reviewdog/action-eslint@f7eb7e555c4d14324b1827e69cad181d370a173e # v1
+        uses: reviewdog/action-eslint@3ee2a450da17e060b9dfa4bffd53976906c6b2b0 # v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           filter_mode: diff_context
