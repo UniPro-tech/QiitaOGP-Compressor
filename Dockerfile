@@ -1,4 +1,4 @@
-FROM node:25
+FROM node:24.22.1-alpine
 
 RUN apt-get update && apt-get install -y \
     zip \
