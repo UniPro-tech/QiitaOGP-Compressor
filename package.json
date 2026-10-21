@@ -19,7 +19,7 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.3",
     "@types/jsdom": "^28.0.3",
-    "@types/node": "^25.9.5",
+    "@types/node": "^26.0.0",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.4",
     "baseline-browser-mapping": "^2.11.16",
