@@ -5,22 +5,22 @@
     "": {
       "name": "qiita-ogp-compressor",
       "dependencies": {
-        "@next/third-parties": "^16.3.0",
-        "fast-xml-parser": "^5.10.1",
+        "@next/third-parties": "^16.3.1",
+        "fast-xml-parser": "^5.11.0",
         "jsdom": "^28.1.0",
-        "next": "^16.3.0",
+        "next": "^16.3.1",
         "react": "^19.2.8",
         "react-dom": "^19.2.8",
       },
       "devDependencies": {
         "@tailwindcss/postcss": "^4.3.3",
-        "@types/jsdom": "^28.0.3",
+        "@types/jsdom": "^30.0.0",
         "@types/node": "^25.9.5",
         "@types/react": "^19.2.18",
         "@types/react-dom": "^19.2.4",
-        "baseline-browser-mapping": "^2.11.13",
+        "baseline-browser-mapping": "^2.11.16",
         "eslint": "^9.39.5",
-        "eslint-config-next": "^16.3.0",
+        "eslint-config-next": "^16.3.1",
         "tailwindcss": "^4.3.3",
         "typescript": "^5.9.3",
       },
@@ -253,7 +253,7 @@
 
     "@types/estree": ["@types/estree@1.0.8", "https://npm.flatt.tech/@types/estree/-/estree-1.0.8.tgz", {}, "sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w=="],
 
-    "@types/jsdom": ["@types/jsdom@28.0.3", "https://npm.flatt.tech/@types/jsdom/-/jsdom-28.0.3.tgz", { "dependencies": { "@types/node": "*", "@types/tough-cookie": "*", "parse5": "^8.0.0", "undici-types": "^7.21.0" } }, "sha512-/HQ2uFoetFTXuye8vzIcHw2z6Fwi7Hi/qcgC+RoS9NCyewiqxhVGqlG+ViGB6lkax481R6dmhf1I7lIGlzJStQ=="],
+    "@types/jsdom": ["@types/jsdom@30.0.0", "", { "dependencies": { "@types/node": "*", "@types/tough-cookie": "*", "parse5": "^8.0.0", "undici-types": "^8.9.0" } }, "sha512-uAHGxujGE0cDaKGdK28zgDotFtNA7MKq5DXl8LrfdxdCI8VHcg15oJz+amHTChPNI5JpgEPQWc2xFdrw3em/nQ=="],
 
     "@types/json-schema": ["@types/json-schema@7.0.15", "https://npm.flatt.tech/@types/json-schema/-/json-schema-7.0.15.tgz", {}, "sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA=="],
 
@@ -913,7 +913,7 @@
 
     "undici": ["undici@7.22.0", "https://npm.flatt.tech/undici/-/undici-7.22.0.tgz", {}, "sha512-RqslV2Us5BrllB+JeiZnK4peryVTndy9Dnqq62S3yYRRTj0tFQCwEniUy2167skdGOy3vqRzEvl1Dm4sV2ReDg=="],
 
-    "undici-types": ["undici-types@7.22.0", "https://npm.flatt.tech/undici-types/-/undici-types-7.22.0.tgz", {}, "sha512-RKZvifiL60xdsIuC80UY0dq8Z7DbJUV8/l2hOVbyZAxBzEeQU4Z58+4ZzJ6WN2Lidi9KzT5EbiGX+PI/UGYuRw=="],
+    "undici-types": ["undici-types@8.12.4", "", {}, "sha512-GNCQH3MbVGB8OAVAoTiLH8pu4wx5Ni3DWKpnBzGj3WDsi8EwmK0aOVBooNEt+g5YL1eHPxcS9XUTouwFU6j1kQ=="],
 
     "unrs-resolver": ["unrs-resolver@1.11.1", "https://npm.flatt.tech/unrs-resolver/-/unrs-resolver-1.11.1.tgz", { "dependencies": { "napi-postinstall": "^0.3.0" }, "optionalDependencies": { "@unrs/resolver-binding-android-arm-eabi": "1.11.1", "@unrs/resolver-binding-android-arm64": "1.11.1", "@unrs/resolver-binding-darwin-arm64": "1.11.1", "@unrs/resolver-binding-darwin-x64": "1.11.1", "@unrs/resolver-binding-freebsd-x64": "1.11.1", "@unrs/resolver-binding-linux-arm-gnueabihf": "1.11.1", "@unrs/resolver-binding-linux-arm-musleabihf": "1.11.1", "@unrs/resolver-binding-linux-arm64-gnu": "1.11.1", "@unrs/resolver-binding-linux-arm64-musl": "1.11.1", "@unrs/resolver-binding-linux-ppc64-gnu": "1.11.1", "@unrs/resolver-binding-linux-riscv64-gnu": "1.11.1", "@unrs/resolver-binding-linux-riscv64-musl": "1.11.1", "@unrs/resolver-binding-linux-s390x-gnu": "1.11.1", "@unrs/resolver-binding-linux-x64-gnu": "1.11.1", "@unrs/resolver-binding-linux-x64-musl": "1.11.1", "@unrs/resolver-binding-wasm32-wasi": "1.11.1", "@unrs/resolver-binding-win32-arm64-msvc": "1.11.1", "@unrs/resolver-binding-win32-ia32-msvc": "1.11.1", "@unrs/resolver-binding-win32-x64-msvc": "1.11.1" } }, "sha512-bSjt9pjaEBnNiGgc9rUiHGKv5l4/TGzDmYw3RhnkJGtLhbnnA/5qJj7x3dNDCRx/PJxu774LlH8lCOlB4hEfKg=="],
 
